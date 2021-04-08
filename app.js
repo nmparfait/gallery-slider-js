@@ -9,8 +9,15 @@ function getElement(selection) {
 }
 
 function Gallery(element) {
-  this.list = element.querySelectorAll('.img');
-  console.log(this.list);
+  this.list = [...element.querySelectorAll('.img')];
+  //target
+  this.modal = getElement('.modal');
+  this.modalImg = getElement('.main-img');
+  this.modalImages = getElement('.modal-images');
+  this.closeBtn = getElement('.close-btn');
+  this.prevBtn = getElement('.prev-btn');
+  this.nextBtn = getElement('.next-btn');
+  //console.log(this.list);
 }
 
 const nature = new Gallery(getElement('.nature'));
